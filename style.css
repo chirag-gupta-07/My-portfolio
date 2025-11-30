@@ -26,7 +26,7 @@ html{
 header{
     background-color: var(--dark);
     clip-path: polygon(0 0,100% 0,100% 100%,70% 85%,0 100%);
-    height:680px;
+    height:auto;
 }
 
 .container{
@@ -209,6 +209,8 @@ section{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 100px;
+    max-width: auto;
+    place-items: center;
     
 }
 
@@ -220,7 +222,7 @@ section{
 .card{
     background-color: var(--pure);
     height: 200px;
-    width:300px;
+    width:200px;
     margin: 10px 10px;
     padding: 20px;
     align-content: center;
@@ -286,6 +288,7 @@ section{
     grid-template-columns:repeat(3,1fr);
     gap:30px;
     margin-top:60px;
+    place-items: center;
 }
 
 .project-container img{
@@ -339,6 +342,7 @@ section{
     display:grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 0px;
+    place-items: center;
     
 }
 
@@ -346,11 +350,10 @@ section{
     background-color: var(--light);
     height: 200px;
     width:300px;
-    margin: 10px 10px;
+    margin: 0px;
     padding: 20px;
     align-content: center;
     text-align: center;
-    margin-left: 150px;
     border-radius: 5px;
 }
 
@@ -426,5 +429,150 @@ footer{
     padding:20px 0;
     margin-top:50px;
     font-size:14px;
+}
+
+@media(max-width:1182px){
+  header{
+     /* remove clip path on small screens */
+    min-height: auto;
+  }
+
+  .card-wrapper{
+    grid-template-columns: 1fr 1fr ;
+  }
+
+  .card-wrapper1{
+    grid-template-columns: 1fr;
+  }
+  .project-container{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #name{
+    height: 30px;
+    width: 600px;
+}
+
+#mail{
+    height: 30px;
+    width: 600px;
+}
+
+#subject{
+    height: 30px;
+    width:600px;
+}
+
+#message{
+    height: 200px;
+    width:600px;
+    margin-bottom: 40px;
+}
+}
+
+@media(max-width:800px){
+  header{
+     /* remove clip path on small screens */
+    min-height: auto;
+    clip-path: none;
+    height: 1100px;
+  }
+
+  .card-wrapper{
+    grid-template-columns: 1fr 1fr ;
+    justify-content: center;
+    place-items: center;
+  }
+
+  .card{
+    margin: 10px;
+  }
+
+  .card:hover{
+    height: 200px;
+    width:200px;
+  }
+
+  .card-wrapper1{
+    grid-template-columns: 1fr ;
+  }
+  .project-container{
+    grid-template-columns: 1fr ;
+  }
+
+  .card1{
+    padding: 0px;
+    width: 250px;
+  }
+
+  #name{
+    height: 30px;
+    width: 270px;
+}
+
+#mail{
+    height: 30px;
+    width: 270px;
+}
+
+#subject{
+    height: 30px;
+    width:270px;
+}
+
+#message{
+    height: 200px;
+    width:270px;
+    margin-bottom: 40px;
+}
+
+#ss1{
+    padding:25px;
+}
+
+.flex{
+    flex-direction: column;
+}
+
+.project-card{
+    padding:5px;
+    width: 250px;
+}
+
+.project-card img{
+    width: 230px;
+    height: auto;
+}
+
+.md{
+    flex-direction: row;
+}
+
+.md img{
+    height: 30px;
+    width: auto;
+}
+
+.right1{
+    padding: 10px;
+    margin:0px;
+}
+
+#logo {
+    margin :0px;
+}
+
+.contact{
+    padding:50px;
+}
+
+  
+@media(max-width:465px){
+
+    .card-wrapper{
+        grid-template-columns: 1fr;
+    }
+}
+
 }
 
